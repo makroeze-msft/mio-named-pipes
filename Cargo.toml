@@ -13,11 +13,11 @@ Windows named pipe bindings for mio.
 
 [target.'cfg(windows)'.dependencies]
 log = "0.4"
-mio = "0.6.5"
-miow = "0.3"
+mio = {path = "../mio-nonbroken"}
+miow = {path = "../miow"}
 
 [target.'cfg(windows)'.dependencies.winapi]
-version = "0.3"
+path = "../winapi-rs"
 features = ["winerror", "ioapiset", "minwinbase", "winbase"]
 
 [dev-dependencies]
